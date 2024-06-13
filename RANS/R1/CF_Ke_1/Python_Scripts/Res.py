@@ -52,7 +52,7 @@ else:
         plt.plot(res['iteration'], res['final'], label=f'Final residual ({field})')
 
     plt.yscale('log')
-    plt.xlabel('Iteration')
+    plt.xlabel('Iteraxxxxxxxxxxxxxxtion')
     plt.ylabel('Residual')
     plt.title('Residuals vs Iterations')
     plt.legend()
