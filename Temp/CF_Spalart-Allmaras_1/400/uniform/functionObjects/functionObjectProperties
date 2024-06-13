@@ -1,0 +1,115 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2312                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    arch        "LSB;label=32;scalar=64";
+    class       dictionary;
+    location    "400/uniform/functionObjects";
+    object      functionObjectProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+cdf7e925f5746741c316f5fbcf39ad0dfca90775
+{
+    forceCoeffs
+    {
+        scalar
+        {
+            Cd              0.002502037932642542;
+            CdPressure      0.002428988885613884;
+            CdViscous       7.30490470286577e-05;
+            CdInternal      0;
+            Cd(f)           0.002132407946426579;
+            Cd(f)Pressure   0.002063382175612459;
+            Cd(f)Viscous    6.902577081411985e-05;
+            Cd(f)Internal   0;
+            Cd(r)           0.0003696299862159623;
+            Cd(r)Pressure   0.0003656067100014244;
+            Cd(r)Viscous    4.023276214537847e-06;
+            Cd(r)Internal   0;
+            Cl              -0.001762777960210617;
+            ClPressure      -0.001697775465611035;
+            ClViscous       -6.500249459958202e-05;
+            ClInternal      0;
+            Cl(f)           -0.0008768209675146202;
+            Cl(f)Pressure   -0.0008488877328087751;
+            Cl(f)Viscous    -2.793323470584504e-05;
+            Cl(f)Internal   0;
+            Cl(r)           -0.0008859569926959969;
+            Cl(r)Pressure   -0.0008488877328022599;
+            Cl(r)Viscous    -3.706925989373698e-05;
+            Cl(r)Internal   0;
+            CmPitch         4.568012590688396e-06;
+            CmPitchPressure -3.257572618686699e-15;
+            CmPitchViscous  4.568012593945968e-06;
+            CmPitchInternal 0;
+            CmRoll          0.0008813889801053085;
+            CmRollPressure  0.0008488877328055175;
+            CmRollViscous   3.2501247299791e-05;
+            CmRollInternal  0;
+            CmYaw           0.001251018966321271;
+            CmYawPressure   0.001214494442806942;
+            CmYawViscous    3.652452351432885e-05;
+            CmYawInternal   0;
+            Cs              -3.251843493958667e-23;
+            CsPressure      -4.689532195042043e-23;
+            CsViscous       1.437688701083377e-23;
+            CsInternal      0;
+            Cs(f)           0.001251018966321271;
+            Cs(f)Pressure   0.001214494442806942;
+            Cs(f)Viscous    3.652452351432885e-05;
+            Cs(f)Internal   0;
+            Cs(r)           -0.001251018966321271;
+            Cs(r)Pressure   -0.001214494442806942;
+            Cs(r)Viscous    -3.652452351432885e-05;
+            Cs(r)Internal   0;
+        }
+    }
+    sets
+    {
+        vector
+        {
+            average(sampleLine_U,U) ( 0.0441726 0.00171729 2.84849e-23 );
+            min(sampleLine_U,U) ( 0.00949171 1.89675e-05 -1.74096e-22 );
+            max(sampleLine_U,U) ( 0.0514924 0.00418104 2.68031e-22 );
+            average(U)      ( 0.0441726 0.00171729 2.84849e-23 );
+            min(U)          ( 0.00949171 1.89675e-05 -1.74096e-22 );
+            max(U)          ( 0.0514924 0.00418104 2.68031e-22 );
+        }
+        label
+        {
+            size(sampleLine_U,U) 50;
+            size(U)         50;
+        }
+    }
+}
+
+sets
+{
+    U
+    {
+        file            "<case>/postProcessing/sets/400/sampleLine_U_U.xy";
+    }
+}
+
+streamlines
+{
+    U
+    {
+        file            "<case>/postProcessing/sets/streamlines/400/track0.vtp";
+    }
+    p
+    {
+        file            "<case>/postProcessing/sets/streamlines/400/track0.vtp";
+    }
+}
+
+
+// ************************************************************************* //

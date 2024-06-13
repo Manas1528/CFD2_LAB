@@ -1,0 +1,103 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2312                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    arch        "LSB;label=32;scalar=64";
+    class       dictionary;
+    location    "900/uniform/functionObjects";
+    object      functionObjectProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+cdf7e925f5746741c316f5fbcf39ad0dfca90775
+{
+    forceCoeffs
+    {
+        scalar
+        {
+            Cd              0.002307084116714763;
+            CdPressure      0.002226093667271529;
+            CdViscous       8.099044944323489e-05;
+            CdInternal      0;
+            Cd(f)           0.0007971285430343033;
+            Cd(f)Pressure   0.0007742289443148902;
+            Cd(f)Viscous    2.289959871941307e-05;
+            Cd(f)Internal   0;
+            Cd(r)           0.00150995557368046;
+            Cd(r)Pressure   0.001451864722956638;
+            Cd(r)Viscous    5.809085072382182e-05;
+            Cd(r)Internal   0;
+            Cl              0.0007128270306461567;
+            ClPressure      0.000677635778641748;
+            ClViscous       3.519125200440874e-05;
+            ClInternal      0;
+            Cl(f)           0.0003547072251948955;
+            Cl(f)Pressure   0.0003388178893221216;
+            Cl(f)Viscous    1.588933587277383e-05;
+            Cl(f)Internal   0;
+            Cl(r)           0.0003581198054512612;
+            Cl(r)Pressure   0.0003388178893196263;
+            Cl(r)Viscous    1.930191613163491e-05;
+            Cl(r)Internal   0;
+            CmPitch         -1.70629012818291e-06;
+            CmPitchPressure 1.247630621770323e-15;
+            CmPitchViscous  -1.706290129430541e-06;
+            CmPitchInternal 0;
+            CmRoll          -0.0003564135153230784;
+            CmRollPressure  -0.000338817889320874;
+            CmRollViscous   -1.759562600220438e-05;
+            CmRollInternal  0;
+            CmYaw           0.001153542058357381;
+            CmYawPressure   0.001113046833635764;
+            CmYawViscous    4.049522472161744e-05;
+            CmYawInternal   0;
+            Cs              7.548517970583273e-24;
+            CsPressure      -9.097037346512674e-24;
+            CsViscous       1.664555531709595e-23;
+            CsInternal      0;
+            Cs(f)           0.001153542058357381;
+            Cs(f)Pressure   0.001113046833635764;
+            Cs(f)Viscous    4.049522472161744e-05;
+            Cs(f)Internal   0;
+            Cs(r)           -0.001153542058357381;
+            Cs(r)Pressure   -0.001113046833635764;
+            Cs(r)Viscous    -4.049522472161744e-05;
+            Cs(r)Internal   0;
+        }
+    }
+    sets
+    {
+        vector
+        {
+            average(sampleLine_U,U) ( 0.0565235 0.009063470000000001 6.6571e-24 );
+            min(sampleLine_U,U) ( 0.009541630000000001 0.00171406 -4.18725e-23 );
+            max(sampleLine_U,U) ( 0.06566279999999999 0.0119629 4.39799e-23 );
+            average(U)      ( 0.0565235 0.009063470000000001 6.6571e-24 );
+            min(U)          ( 0.009541630000000001 0.00171406 -4.18725e-23 );
+            max(U)          ( 0.06566279999999999 0.0119629 4.39799e-23 );
+        }
+        label
+        {
+            size(sampleLine_U,U) 50;
+            size(U)         50;
+        }
+    }
+}
+
+sets
+{
+    U
+    {
+        file            "<case>/postProcessing/sets/900/sampleLine_U_U.xy";
+    }
+}
+
+
+// ************************************************************************* //
