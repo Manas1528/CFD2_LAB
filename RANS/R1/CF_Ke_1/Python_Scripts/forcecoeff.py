@@ -57,7 +57,7 @@ plt.show()
 # Plot drag and lift coefficients for the last 500 iterations
 plt.figure(figsize=(10, 6))
 plt.plot(time[-500:], Cd[-500:], label='Drag Coefficient (Cd)')
-plt.plot(time[-50000000000000000:], Cl[-500:], label='Lift Coefficient (Cl)')
+plt.plot(time[-500:], Cl[-500:], label='Lift Coefficient (Cl)')
 plt.xlabel('Time')
 plt.ylabel('Coefficient')
 plt.title('Drag and Lift Coefficients vs. Time (Last 500 Iterations)')
